@@ -41,7 +41,7 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   color: var(--mainBlack);
-  background: var(--mainBackground);
+  background: lightgreen;
   line-height: 1.4;
   font-size: 1rem;
   font-weight: 300;
@@ -278,9 +278,9 @@ Book
   overflow: hidden;
 }
 .book-footer p {
-  color: dimgrey;
+  color: rgba(0, 0, 0, 0.65);
   letter-spacing: 1px;
-  font-weight: 500;
+  font-weight: 700;
   margin-bottom: 0.5rem;
   height: 2.5rem;
   overflow: hidden;
