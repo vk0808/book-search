@@ -112,14 +112,14 @@ const SingleBook = () => {
           ) : (
             <p>
               <span className="single-book-data">language :</span>
-              {language}
+              {language === 'en' ? "english" : language}
             </p>
           )}
           {authors === undefined ? (
             ""
           ) : (
             <p>
-              <span className="single-book-data">authors :</span>
+              <span className="single-book-data">author<span style={{textTransform: 'lowercase'}}>(s) </span>:</span>
               <ul>
                 {authors.map((author, index) => {
                   return author ? <li key={index}>{author}</li> : null;
@@ -139,7 +139,7 @@ const SingleBook = () => {
             ""
           ) : (
             <p>
-              <span className="single-book-data">genres :</span>
+              <span className="single-book-data">genre<span style={{textTransform: 'lowercase'}}>(s) </span> :</span>
               <ul>
                 {category.map((cat, index) => {
                   return cat ? <li key={index}>{cat}</li> : null;
@@ -192,7 +192,7 @@ const SingleBook = () => {
             <span className="single-book-data">rating :</span>
             {rating ? (
               <span className="average-rating">
-                {rating} stars (out of {count} ratings)
+                {rating}/5 (out of {count} ratings)
               </span>
             ) : (
               "no rating"
