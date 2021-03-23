@@ -10,15 +10,13 @@ export const AppProvider = ({ children }) => {
   const [searchTerm, setSearchTerm] = useState("lord of rings");
   const [books, setBooks] = useState([]);
 
-  const fetchBooks = async () => {
+  const fetchBooks = () => {
     setLoading(true)
     axios
       .get(`${url}${searchTerm.split(" ").join('+')}&api-key=${api_key}&maxResults=40`)
       .then((response) => {
         setBooks(response.data.items);
         setLoading(false)
-        console.log(response.data);
-        console.log(`${url}${searchTerm.split(" ").join('+')}&api-key=${api_key}`);
       })
       .catch((error) => {
         setLoading(false)
