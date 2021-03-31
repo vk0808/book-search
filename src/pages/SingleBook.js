@@ -3,6 +3,7 @@ import axios from "axios";
 import Loading from "../components/Loading";
 import { useParams, Link } from "react-router-dom";
 import LinesEllipsis from "react-lines-ellipsis";
+import Stars from 'react-stars-display';
 import "../styles.css";
 
 const url = "https://www.googleapis.com/books/v1/volumes/";
@@ -192,7 +193,11 @@ const SingleBook = () => {
             <span className="single-book-data">rating :</span>
             {rating ? (
               <span className="average-rating">
-                {rating}/5 (out of {count} ratings)
+                <Stars 
+                  stars={rating}
+                  size={30}
+                />
+                 (out of {count} ratings)
               </span>
             ) : (
               "no rating"
