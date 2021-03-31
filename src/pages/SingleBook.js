@@ -197,7 +197,7 @@ const SingleBook = () => {
                   stars={rating}
                   size={30}
                 />
-                 (out of {count} ratings)
+                 ({rating} stars out of {count} ratings)
               </span>
             ) : (
               "no rating"
