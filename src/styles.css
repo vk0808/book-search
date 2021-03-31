@@ -6,7 +6,7 @@ Variables
 :root {
   --primaryLightColor: #464866;
   --primaryColor: #2e9cca;
-  --secondaryColor: #1e6583;
+  --secondaryColor: #206d8d;
   --primaryDarkColor: #29648a;
   --mainWhite: #fff;
   --offWhite: #f7f7f7;
@@ -349,12 +349,9 @@ Single Book
   font-weight: bold;
   margin-right: 0.5rem;
   vertical-align: top;
-}
-.single-book-data {
-  background: var(--primaryLightColor);
   padding: 0.25rem 0.5rem;
   border-radius: var(--mainBorderRadius);
-  color: var(--primaryColor);
+  color: var(--secondaryColor);
 }
 .single-book-info {
   padding-top: 2rem;
