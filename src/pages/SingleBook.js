@@ -3,7 +3,7 @@ import axios from "axios";
 import Loading from "../components/Loading";
 import { useParams, Link } from "react-router-dom";
 import LinesEllipsis from "react-lines-ellipsis";
-import Stars from 'react-stars-display';
+import Stars from "react-stars-display";
 import "../styles.css";
 
 const url = "https://www.googleapis.com/books/v1/volumes/";
@@ -113,14 +113,16 @@ const SingleBook = () => {
           ) : (
             <p>
               <span className="single-book-data">language :</span>
-              {language === 'en' ? "english" : language}
+              {language === "en" ? "english" : language}
             </p>
           )}
           {authors === undefined ? (
             ""
           ) : (
             <p>
-              <span className="single-book-data">author<span style={{textTransform: 'lowercase'}}>(s) </span>:</span>
+              <span className="single-book-data">
+                author<span style={{ textTransform: "lowercase" }}>(s) </span>:
+              </span>
               <ul>
                 {authors.map((author, index) => {
                   return author ? <li key={index}>{author}</li> : null;
@@ -140,7 +142,9 @@ const SingleBook = () => {
             ""
           ) : (
             <p>
-              <span className="single-book-data">genre<span style={{textTransform: 'lowercase'}}>(s) </span> :</span>
+              <span className="single-book-data">
+                genre<span style={{ textTransform: "lowercase" }}>(s) </span> :
+              </span>
               <ul>
                 {category.map((cat, index) => {
                   return cat ? <li key={index}>{cat}</li> : null;
@@ -193,11 +197,8 @@ const SingleBook = () => {
             <span className="single-book-data">rating :</span>
             {rating ? (
               <span className="average-rating">
-                <Stars 
-                  stars={rating}
-                  size={30}
-                />
-                 ({rating} stars out of {count} ratings)
+                <Stars stars={rating} size={30} />({rating} stars out of {count}{" "}
+                ratings)
               </span>
             ) : (
               "no rating"
