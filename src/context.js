@@ -7,7 +7,7 @@ export const AppContext = React.createContext();
 
 export const AppProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
-  const [searchTerm, setSearchTerm] = useState("lord of rings");
+  const [searchTerm, setSearchTerm] = useState("R K Narayan");
   const [books, setBooks] = useState([]);
 
   const fetchBooks = () => {
