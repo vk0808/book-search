@@ -197,7 +197,7 @@ const SingleBook = () => {
             <span className="single-book-data">rating :</span>
             {rating ? (
               <span className="average-rating">
-                <Stars stars={rating} size={30} />({rating} stars out of {count}{" "}
+                <Stars fill='#ffff24' stars={rating} size={30} />({rating} stars out of {count}{" "}
                 ratings)
               </span>
             ) : (
